@@ -30,7 +30,7 @@ resources:
       networkInterfaces:
       - network: $(ref.{{ properties["network"] }}.selfLink)
         subnetwork: $(ref.{{ properties["subnetwork"] }}.selfLink)
-      - accessConfigs:
+        accessConfigs:
         - name: external-nat
           type: ONE_TO_ONE_NAT
       metadata:
@@ -45,3 +45,4 @@ resources:
 outputs:
 - name: instanceTemplateSelfLink
   value: $(ref.{{ IT_NAME }}.selfLink)
+
